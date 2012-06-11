@@ -1,4 +1,13 @@
-### Fork the Mint Library
+#---
+title: Installing Mint within a Virtual Environment
+date: 2012-06-11
+description:
+categories: installation
+tags: [virtualmachine, vim, xubuntu, virtualenv, pip, mint]
+
+layout: post
+---
+## Fork the Mint Library
 
 Go to BitBucket, log in to your account, and find the mint repository at [https://bitbucket.org/autonomy/mint](https://bitbucket.org/autonomy/mint). Fork the repository to your account and clone your fork to your hgdev folder by executing
 
