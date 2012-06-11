@@ -112,4 +112,6 @@ You should also edit the .vimrc, which should be empty. Download the recommended
     wget https://raw.github.com/gist/1295884/d786bbd469cb700666daad5d21d26ca3eeb9b6be/.vimrc
     ln -s ~/Dropbox/config/vim/.vimrc ~
 
-Next, click [here](http://tomdru.ruhoh.com/sysadmin/installing-version-control-software) to set up source control.
+### Next step
+
+Click [here](http://tomdru.ruhoh.com/sysadmin/installing-version-control-software) to set up source control.
