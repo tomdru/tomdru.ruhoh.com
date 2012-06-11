@@ -64,4 +64,4 @@ A good diff viewer is [meld](http://meldmerge.org/)
 	sudo apt-get install meld
 
 ### Next step
-You're ready to [install mint](http://tomdru.ruhoh.com/sysadmin/installation/installing-mint-within-a-virtual-environment/).
+You're ready to [install mint](http://tomdru.ruhoh.com/installation/installing-mint-within-a-virtual-environment/).
