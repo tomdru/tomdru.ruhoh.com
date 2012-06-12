@@ -30,9 +30,9 @@ This installs
 * *libfreetype6-dev* - FreeType 2 font engine, development files
 * *libpng12-dev* - PNG library - development
 
-Next, execute the following
+Next, execute the following within a virtual enviroment
 
-    sudo pip install numpy scipy pandas matplotlib
+    pip install numpy scipy pandas matplotlib
 
 [NumPy](http://numpy.scipy.org) handles efficient matrix- and vector-type operations. [SciPy](http://www.scipy.org/) extends many of the objects and functions in NumPy and is 
 geared toward scientific computing. [Pandas](http://pandas.pydata.org/) provides data structures and data analysis tools. [Matplotlib](http://matplotlib.sourceforge.net/) provides a 
