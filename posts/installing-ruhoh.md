@@ -1,6 +1,6 @@
 ---
 title: Installing Ruhoh 
-date: '2012-05-30'
+date: '2012-06-12'
 description:
 categories: installation
 tags: [ruhoh, ssh]
