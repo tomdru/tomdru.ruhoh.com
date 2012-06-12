@@ -1,8 +1,8 @@
 ---
 
-title: Installing BDB XML in Ubuntu
+title: Installing BDB XML
 date: '2012-06-12'
-description: Installing BDB XML in Ubuntu
+description: Installing BDB XML
 categories: installation 
 tags: 
     - ubuntu
@@ -15,8 +15,8 @@ layout: post
 
 ---
 
-Installing BDB XML in Ubuntu
----------------------------
+Installing BDB XML
+------------------
 
 ### Prerequisites
 
