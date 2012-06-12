@@ -1,6 +1,6 @@
 ---
 title: Installing a Xubuntu Virtual Machine for Developers
-date: 2012-05-30
+date: '2012-06-11'
 description:
 categories: installation
 tags: [virtualmachine, vim, xubuntu, virtualenv, pip]
