@@ -1,7 +1,7 @@
 ---
 
 title: Installing Version Control Software
-date: '2012-06-04'
+date: '2012-06-11'
 description: Installing Mercurial, Git, and Meld for Xubuntu 12.04
 categories: sysadmin
 tags: 
