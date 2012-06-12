@@ -8,6 +8,13 @@ tags: [virtualmachine, vim, xubuntu, virtualenv, pip, mint]
 layout: post
 ---
 
+### Install Pip and Virtualenv
+
+Pip is an installer tailored specifically to Python packages. It will install the most recent version of the package, which is important for satisfying certain dependencies.
+
+    sudo apt-get install python-pip python-dev build-essential
+    sudo pip install --upgrade pip virtualenv virtualenvwrapper
+
 ### Fork the Mint Library
 
 Go to BitBucket, log in to your account, and find the mint repository at [https://bitbucket.org/autonomy/mint](https://bitbucket.org/autonomy/mint). Fork the repository to your account and clone your fork to your hgdev folder by executing
