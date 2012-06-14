@@ -17,7 +17,9 @@ Pip is an installer tailored specifically to Python packages. It will install th
 
 ### Fork the Mint Library
 
-Go to BitBucket, log in to your account, and find the mint repository at [https://bitbucket.org/autonomy/mint](https://bitbucket.org/autonomy/mint). Fork the repository to your account and clone your fork to your hgdev folder by executing
+Mint is a library of a number of tools for working with financial data.
+
+To install , go to BitBucket, log in to your account, and find the mint repository at [https://bitbucket.org/autonomy/mint](https://bitbucket.org/autonomy/mint). Fork the repository to your account and clone your fork to your hgdev folder by executing
 
     cd ~/hgdev/org.bitbucket/asmith/
     hg clone https://asmith@bitbucket.org/asmith/mint
@@ -28,6 +30,10 @@ Install the mint dependencies:
 
     sudo apt-get install libxml2-dev
     sudo apt-get install libxslt1-dev
+
+Look at the *requirements.txt* file in the main folder of mint for all of the Python package dependencies. To install them automatically into your environment with pip, from mint folder execute
+
+    pip install -r requirements.txt
 
 ### Create a virtual environment for mint
 
