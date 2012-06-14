@@ -78,7 +78,7 @@ Open the Terminal Emulator from the top left menu -> Accessories. First install 
 
 Mount the Guest Additions CD by selecting Devices > Install Guest Additions. Move to the folder on the CD and execute a script
 
-    cd /media/VBOXADDITIONS…
+    cd /media/VBOXADDITIONS
     sudo sh ./VBoxLinuxAdditions.run
     
 Once its done, reboot and eject the Guest Additions CD. To resize your window, click the + in the upper-left-hand corner. The virtual machine should be in fullscreen mode.
@@ -102,7 +102,9 @@ The command *ln -s* places a symbolic link to a file or folder wherever you want
 
 ### Install vim
 
-Execute
+Xubuntu automatically comes with vi, a powerful text editor. Vi can be used to write any kind of text document. Vim makes the editor ideal for coding, as it adds features like syntax highlighting.
+
+To install execute
 
     sudo apt-get install vim
 
@@ -111,6 +113,8 @@ You should also edit the .vimrc, which should be empty. Download the recommended
     mkdir ~/Dropbox/config/vim
     wget https://raw.github.com/gist/1295884/d786bbd469cb700666daad5d21d26ca3eeb9b6be/.vimrc
     ln -s ~/Dropbox/config/vim/.vimrc ~
+
+One useful feature of this configuration is that it substitutes four spaces for a tab when you hit the tab key. Tabs can be difficult to work with and is considered bad style.
 
 ### Next step
 
