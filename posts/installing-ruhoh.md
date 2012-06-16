@@ -12,7 +12,11 @@ Ruhoh is a blogging platform based on Markdown.
 
 ### Prerequisites
 
-Ruhoh requires Git (see [here]()).
+Have [installed Xubuntu 12.04 in a Virtual Machine](/installation/installing-a-xubuntu-virtual-machine-for-developers/).
+
+Have [version control software installed](/installation/installing-version-control-software/).
+
+### Ruby
 
 Install Ruby, using the instructions [here](http://lenni.info/blog/2012/05/installing-ruby-1-9-3-on-ubuntu-12-04-precise-pengolin/). You will also need to add libyaml
 

@@ -8,6 +8,10 @@ tags: [virtualmachine, vim, xubuntu, virtualenv, pip, mint]
 layout: post
 ---
 
+### Prerequisites
+
+Have [version control software installed](/installation/installing-version-control-software/).
+
 ### Install Pip and Virtualenv
 
 Pip is an installer tailored specifically to Python packages. It will install the most recent version of the package, which is important for satisfying certain dependencies.

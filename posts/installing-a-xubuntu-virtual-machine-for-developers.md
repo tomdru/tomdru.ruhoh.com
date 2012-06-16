@@ -118,4 +118,4 @@ One useful feature of this configuration is that it substitutes four spaces for 
 
 ### Next step
 
-Click [here](http://tomdru.ruhoh.com/sysadmin/installing-version-control-software) to set up source control.
+Click [here](/installation/installing-version-control-software/) to set up source control.
