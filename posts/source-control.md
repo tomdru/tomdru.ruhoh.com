@@ -3,7 +3,7 @@
 title: Installing Version Control Software
 date: '2012-06-11'
 description: Installing Mercurial, Git, and Meld for Xubuntu 12.04
-categories: sysadmin
+categories: installation
 tags: 
     - ubuntu
     - precise
@@ -19,7 +19,7 @@ Installing Version Control Software
 
 ### Prerequisites
 
-Have installed Xubuntu 12.04 in a Virtual Machine along the lines of [this guide](http://tomdru.ruhoh.com/installation/installing-a-xubuntu-virtual-machine-for-developers/).
+Have [installed Xubuntu 12.04 in a Virtual Machine](/installation/installing-a-xubuntu-virtual-machine-for-developers/).
 
 We use source control as explained [here](http://praxis.rocketknowledge.com/2011/11/source-control-with-mercurial-and.html).
 
@@ -64,4 +64,4 @@ A good diff viewer is [meld](http://meldmerge.org/)
 	sudo apt-get install meld
 
 ### Next step
-You're ready to [install mint](http://tomdru.ruhoh.com/installation/installing-mint-within-a-virtual-environment/).
+You're ready to [install mint](/installation/installing-mint-within-a-virtual-environment/).
