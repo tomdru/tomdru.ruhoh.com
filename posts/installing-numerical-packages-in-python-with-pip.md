@@ -2,11 +2,17 @@
 title: Installing Numerical Packages in Python with Pip
 date: '2012-06-12'
 description:
-categories: install
+categories: installation
 tags: [pandas, pip, numpy, scipy]
 
 layout: post
 ---
+
+### Prerequisites
+
+Have [installed Xubuntu 12.04 in a Virtual Machine](/installation/installing-a-xubuntu-virtual-machine-for-developers/).
+
+### Dependencies
 
 One of the advantages of Python is the availability of a large number of numerical packages. Installing these, particularly pandas, can be frustrating because of certain dependencies.
 

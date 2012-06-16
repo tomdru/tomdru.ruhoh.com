@@ -20,7 +20,7 @@ Installing BDB XML
 
 ### Prerequisites
 
-Have installed Xubuntu 12.04 in a Virtual Machine.
+Have [installed Xubuntu 12.04 in a Virtual Machine](/installation/installing-a-xubuntu-virtual-machine-for-developers/).
 
 ### Introduction
 
