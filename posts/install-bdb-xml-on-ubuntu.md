@@ -15,9 +15,6 @@ layout: post
 
 ---
 
-Installing BDB XML
-------------------
-
 ### Prerequisites
 
 Have [installed Xubuntu 12.04 in a Virtual Machine](/installation/installing-a-xubuntu-virtual-machine-for-developers/).
@@ -62,22 +59,6 @@ and make sure that ~/bin is in your PATH:
 
     export PATH=$PATH:$HOME/bin
 
-### Rlwrap
-
-I recommend using rlwrap to add input history and command completion.
-
-Install rlwrap
-
-	sudo apt-get install rlwrap
-
-Create a script in ~/bin called "start_dbxml.sh" to start dbxml:
-
-	#!/usr/bin/env bash
-	
-	mkdir -p $HOME/.rlwrap/dbxml/"`date +%Y%m%d`"
-	
-	rlwrap -rcl $HOME/.rlwrap/dbxml/`date +%Y%m%d`/`date +%H%M%S-%N`.log dbxml
-
 ### Python bindings
 
 Install system-wide the python bindings. Execute:
@@ -92,14 +73,36 @@ You can then build and install the dbxml module:
 	$ python setup.py build
 	$ sudo python setup.py install
 
-If you're going to work in a virtual enviroment, you need to symlink the installed resources. Let's say your virtual environment has its python packages installed in the following directory:
+Create two folders in /opt to house dbxml and bsddb3. First, let's move dbxml:
 
-    ~/vedev/veclove/local/lib/python2.7/site-packages
+	$ sudo mkdir -p /opt/bbdbxml/dbxml-2.5.16
 
-Navigate into this folder, then execute:
+Nagivate to the dbxml files, and move them into /opt/bbdbxml/dbxml-2.5.16:
 
-    ln -s /usr/local/lib/python2.7/dist-packages/dbxml.py .
-    ln -s /usr/local/lib/python2.7/dist-packages/dbxml.pyc .
-    ln -s /usr/local/lib/python2.7/dist-packages/_dbxml.so .
+	$ cd /usr/local/lib/python2.7/dist-packages/
+	$ sudo mv dbxml-2.5.16.egg-info /opt/bbdbxml/dbxml-2.5.16/
+	$ sudo mv dbxml.py /opt/bbdbxml/dbxml-2.5.16/
+	$ sudo mv dbxml.pyc /opt/bbdbxml/dbxml-2.5.16/
+	$ sudo mv _dbxml.so /opt/bbdbxml/dbxml-2.5.16/
+
+Next, move bsddb3:
+
+	$ sudo mkdir /opt/bbbsddb3/
+	$ cd /opt/bbbsddb3/
+	$ sudo mv /usr/local/lib/python2.7/dist-packages/bsddb3-4.8.1-py2.7-linux-x86_64.egg/ .
+
+Create two symlinks:
+
+	$ sudo ln -s /opt/bbdbxml/dbxml-2.5.16 /opt/bbdbxml/current
+	$ sudo ln -s /opt/bbbsddb3/bsddb3-4.8.1-py2.7-linux-x86_64.egg/ /opt/bbbsddb3/current
+
+You will need to modify your *PYTHONPATH* and *LD\_LIBRARY\_PATH* to point to the new folders you created in /opt. Create a script with the following content to launch iPython.
+
+	#!/usr/bin/env bash
+	
+	export PYTHONPATH=$PYTHONPATH:/opt/bbdbxml/current:/opt/bbbsddb3/current
+	export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/bbdbxml/current:/opt/bbbsddb3/current
+	
+	ipython
 
 
