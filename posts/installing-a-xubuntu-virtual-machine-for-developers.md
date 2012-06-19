@@ -33,6 +33,8 @@ In Settings -> Display, change Video Memory to 128 MB.
 
 In Settings -> Storage, click Plus Sign button, Add CD/DVD device, Choose disk and locate the Xubuntu ISO in the Downloads folder.
 
+In Settings -> Network, choose Attached to: Bridged Adapter.
+
 Now ***Start*** your virtual machine.
 
 ### Install Xubuntu Desktop 12.04
@@ -54,21 +56,29 @@ You will first need to install Xubuntu on your empty virtual machine. This is do
 * **Who are you?** - Assume the user's name is Alice Smith. She would fill in the following
  * Your name: *Alice Smith*
  * Your computer's name: *xubuntu*
- * Pick a username: *asmith*
- * Choose a password: *password*
- * Confirm your password: *password*
+ * Pick a username: *ubuntu*
+ * Choose a password: *secret*
+ * Confirm your password: *secret*
  * Choose whether you would like to log in automatically or always be prompted for your password. The system will begin installing.
 
 * **Installation Complete** - Select *Restart Now*.
 
 The .iso will be ejected automatically. Press ENTER and the system will reboot.
 
+### Snapshot
+
+After the system has rebooted, choose Shut Down with the operating system (in the upper right hand menu.) In the Oracle VM VirtualBox Manager window, click on the Snapshots tab, and click the camera icon to make a snapshot of the fresh install. Call it "fresh-install".
+
 ### Install software updates
 
-Open *System > Update Manager*. With all of the software updates checked, select *Install Updates*. Provide your password 
-and select *Authenticate*. When the update is done, you will be asked to reboot. Select *Restart Now*.
+Open *Accessories > Terminal Emulator*. Execute the following commands:
 
-Open *Accessories > Terminal Emulator*. You will now be installing a series of packages.
+    wget https://raw.github.com/gist/2703110/25dd6b7be4752b2d3c5932ac1f9e30f38b401139/sources.list
+    sudo cp sources.list /etc/apt/
+    sudo apt-get update
+    sudo apt-get upgrade
+
+You will now be installing a series of packages.
 
 ### Install VirtualBox Guest Additions
 
@@ -79,9 +89,9 @@ Open the Terminal Emulator from the top left menu -> Accessories. First install 
 Mount the Guest Additions CD by selecting Devices > Install Guest Additions. Move to the folder on the CD and execute a script
 
     cd /media/VBOXADDITIONS
-    sudo sh ./VBoxLinuxAdditions.run
+    sudo ./VBoxLinuxAdditions.run
     
-Once its done, reboot and eject the Guest Additions CD. To resize your window, click the + in the upper-left-hand corner. The virtual machine should be in fullscreen mode.
+Once its done, shut down and make a new snapshot. Call it "after-upgrade-and-vbox-guest-additions".Start up your VM and eject the Guest Additions CD. To resize your window, click the + in the upper-left-hand corner. The virtual machine should be in fullscreen mode.
 
 ### Install Dropbox
 
@@ -116,6 +126,4 @@ You should also edit the .vimrc, which should be empty. Download the recommended
 
 One useful feature of this configuration is that it substitutes four spaces for a tab when you hit the tab key. Tabs can be difficult to work with and is considered bad style.
 
-### Next step
-
-Click [here](/installation/installing-version-control-software/) to set up source control.
+Finally, shut down and make a snapshot called "after-dropbox-and-vim".
