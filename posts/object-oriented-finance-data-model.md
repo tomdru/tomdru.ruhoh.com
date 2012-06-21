@@ -183,3 +183,22 @@ The agent that quotes a deal level in response to the price taker's request and 
 #### *Responsibilities*
 
 Quoting deal levels
+
+-------------------------------------------------------------------------------
+
+### Class: Deal
+
+Standardized “de facto” terms based on market convections
+
+#### *Responsibilities*
+
+#### *Collaborators*
+
+-------------------------------------------------------------------------------
+### Class:
+
+#### *Responsibilities*
+
+#### *Collaborators*
+
+-------------------------------------------------------------------------------
