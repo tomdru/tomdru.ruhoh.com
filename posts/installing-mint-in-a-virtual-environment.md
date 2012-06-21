@@ -35,10 +35,6 @@ Install the mint dependencies:
     sudo apt-get install libxml2-dev
     sudo apt-get install libxslt1-dev
 
-Look at the *requirements.txt* file in the main folder of mint for all of the Python package dependencies. To install them automatically into your environment with pip, from mint folder execute
-
-    pip install -r requirements.txt
-
 ### Create a virtual environment for mint
 
 You will now create a folder for your virtual environments and set this on your path
@@ -72,7 +68,7 @@ Next, link the folder to your mint hgdev folder
     
 ### Mint requirements.txt
 
-Install the mint requirements:
+Look at the *requirements.txt* file in the main folder of mint for all of the Python package dependencies. To install them automatically into your environment with pip, execute
 
     cd ~/vedev/vemint/mint
     pip install -r requirements.txt
