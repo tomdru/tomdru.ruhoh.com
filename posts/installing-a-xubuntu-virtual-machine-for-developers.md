@@ -91,7 +91,11 @@ Mount the Guest Additions CD by selecting Devices > Install Guest Additions. Mov
     cd /media/VBOXADDITIONS
     sudo ./VBoxLinuxAdditions.run
     
-Once its done, shut down and make a new snapshot. Call it "after-upgrade-and-vbox-guest-additions".Start up your VM and eject the Guest Additions CD. To resize your window, click the + in the upper-left-hand corner. The virtual machine should be in fullscreen mode.
+### Snapshot
+
+Once installation is done, shut down and make a new snapshot. Call it "after-upgrade-and-vbox-guest-additions".
+
+Start up your VM and eject the Guest Additions CD. To resize your window, click the + in the upper-left-hand corner. The virtual machine should be in fullscreen mode.
 
 ### Install Dropbox
 
@@ -125,5 +129,7 @@ You should also edit the .vimrc, which should be empty. Download the recommended
     ln -s ~/Dropbox/config/vim/.vimrc ~
 
 One useful feature of this configuration is that it substitutes four spaces for a tab when you hit the tab key. Tabs can be difficult to work with and is considered bad style.
+
+### Snapshot
 
 Finally, shut down and make a snapshot called "after-dropbox-and-vim".
