@@ -10,7 +10,7 @@ layout: post
 
 Below is a list of the different entities in the *Object-Oriented Finance (OOF)* data model. This is an attempt to organize all of the relevant concepts in the financial universe into a coherent and consistent system. Once this clarity is achieved (and only then), our goal is to translate this model into software.
 
-The primary tool we will use is the *Class-Responsiblity-Collaborator (CRC)* method. Each entity in our model has a "card" outline the (1) name of the entity, (2) the entity's definition and its responsibilities, and (3) the other entities that it must reference to fulfill these responsibilities.
+The primary tool we will use is the *Class-Responsibility-Collaborator (CRC)* method. Each entity in our model has a "card" outline the (1) name of the entity, (2) the entity's definition and its responsibilities, and (3) the other entities that it must reference to fulfill these responsibilities.
 
 We will start with a very fundamental concept: time.
 
@@ -41,14 +41,13 @@ Can tell me its unique location, expressed in the *Julian Date - UTC* format.
 #### *Collaborators*
 
 TimeLine
-
 -------------------------------------------------------------------------------
 
 ### Class: Interval
 
 A closed interval (containing its endpoints) on the TimeLine.
 
-#### *Responsbilities*
+#### *Responsibilities*
 
 Can tell me its start and end points, both of which are Instants. 
 
@@ -62,7 +61,7 @@ Instant, TimeLine
 
 Something that is legally exchangeable with other Assets in some Venue.
 
-#### *Responsbilities*
+#### *Responsibilities*
 
 Can be exchanged in ownership or in possession with other Assets.
 
@@ -92,9 +91,8 @@ A standard Asset arranging a Transaction.
 
 #### *Collaborators*
 
--------------------------------------------------------------------------------
-
 Transaction
+-------------------------------------------------------------------------------
 
 ### Class: Contingent Claim
 
@@ -142,10 +140,23 @@ A sovereign agent makes and enforces laws upon non-sovereign agents within the s
 #### *Collaborators*
 
 Agent, Venue
+-------------------------------------------------------------------------------
+
+### Class: Deal
+
+Standardized “de facto” terms based on market conventions
+
+#### *Responsibilities*
+
+Knows its terms
+
+#### *Collaborators*
+
+Price Taker, Price Maker, Venue
 
 -------------------------------------------------------------------------------
 
-### Class: Financial Transaction
+### Class: Transaction
 
 A bilateral exchange of commitments through the following
 sequence of steps
@@ -158,11 +169,10 @@ sequence of steps
 
 #### *Responsibilities*
 
-Get execution time, deal level, price maker, price taker
-
+Knows its price taker, price maker, execution instant, execution venue, commitment to settle, settlement date, settlement actions 
 #### *Collaborators*
 
-Instant, Deal, Agent, Venue
+Instant, Deal, Agent, Venue, Action?
 
 -------------------------------------------------------------------------------
 
@@ -184,17 +194,66 @@ The agent that quotes a deal level in response to the price taker's request and 
 
 Quoting deal levels
 
+
 -------------------------------------------------------------------------------
 
-### Class: Deal
+### Class: Settlement
 
-Standardized “de facto” terms based on market convections
+A transfer of possession of ownership of assets occurring between two Agents taking place in a Venue on a Settlement Date
+
+#### *Responsibilities*
+
+Knows its Settlement Action
+
+#### *Collaborators*
+
+Asset, Agent, Venue, Instant
+
+-------------------------------------------------------------------------------
+
+### Class: Cash Settlement
+All transfers of either possession or ownership of cash occurring on the
+settlement date.
+
+#### *Responsibilities*
+
+Knows the amount of cash, the receiving Agent, and the giving Agent
+
+#### *Collaborators*
+
+Fiat Asset, Agent
+
+-------------------------------------------------------------------------------
+
+### Class: Non-cash Settlement
 
 #### *Responsibilities*
 
 #### *Collaborators*
 
 -------------------------------------------------------------------------------
+
+### Class: Cash Purchase
+
+A transaction where upon settlement the price maker transfers ownership of an asset and the price taker transfers ownership of some quantity of cash
+
+#### *Responsibilities*
+
+Knows its settlement date, whether the action is a transfer of ownership / transfer of possession, who the Price Taker and Price Maker is,
+#### *Collaborators*
+
+-------------------------------------------------------------------------------
+
+### Class: Cash Sale
+
+The price maker transfers ownership of some amount of cash and the price taker transfers ownership of some asset
+
+#### *Responsibilities*
+
+#### *Collaborators*
+
+-------------------------------------------------------------------------------
+
 ### Class:
 
 #### *Responsibilities*
@@ -202,3 +261,30 @@ Standardized “de facto” terms based on market convections
 #### *Collaborators*
 
 -------------------------------------------------------------------------------
+
+### Class:
+
+#### *Responsibilities*
+
+#### *Collaborators*
+
+-------------------------------------------------------------------------------
+
+
+### Class:
+
+#### *Responsibilities*
+
+#### *Collaborators*
+
+-------------------------------------------------------------------------------
+
+
+### Class:
+
+#### *Responsibilities*
+
+#### *Collaborators*
+
+-------------------------------------------------------------------------------
+
