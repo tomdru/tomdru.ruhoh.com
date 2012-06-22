@@ -1,7 +1,7 @@
 ---
 
 title: xmldb Tutorial 
-date: '2012-06-12'
+date: '2012-06-22'
 description: Making an XPath query in the BDB XML database
 categories: tutorial
 tags: 
