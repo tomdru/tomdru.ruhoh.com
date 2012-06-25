@@ -18,7 +18,7 @@ We will start with a very fundamental concept: time.
 
 ### Class: TimeLine
 
-Provides a single index of all time. 
+Provides a single index of all time in Julian dates and UTC milliseconds.
 
 #### *Responsibilities*
 
@@ -69,13 +69,13 @@ Can be exchanged in ownership or in possession with other Assets.
 
 ### Class: Fiat Asset
 
-Asset created by a Sovereign Agent from nothing that can exchanged for any Asset in the Sovereign's Venue.
+Asset created by a Sovereign Agent from nothing that can be exchanged for any Asset in the Sovereign Agent's Venue.
 
 -------------------------------------------------------------------------------
 
 ### Class: Fungible Asset
 
-Agents are indifferent between individual units of a Fungible Asset. They are mutually exchangeable.
+Agents are indifferent between individual units of a Fungible Asset. They are mutually interchangeable.
 
 -------------------------------------------------------------------------------
 
@@ -85,22 +85,27 @@ An Asset that can be leant from one Agent to another
 
 -------------------------------------------------------------------------------
 
+### Class: Commitment
+
+Assets that causes some agent to be obligated to execute an agent action with the commitment owner at some future time
+
+-------------------------------------------------------------------------------
+
 ### Class: Security
 
-A standard Asset arranging a Transaction.
+Standardized assets that serve as evidence of financial commitments
 
 #### *Collaborators*
 
-Transaction
 -------------------------------------------------------------------------------
 
 ### Class: Contingent Claim
 
-A Security granting the right to engage in a Transaction.
+Asset that allows owner to create a commitment between an agent and himself at some future date contingent on some event.
 
 #### *Collaborators*
 
-Agent, Transaction
+Agent, TimeLine
 
 -------------------------------------------------------------------------------
 
@@ -108,12 +113,11 @@ Agent, Transaction
 
 An Asset that can be consumed. 
 
-
 -------------------------------------------------------------------------------
 
 ### Class: Venue
 
-Gives a context for the laws and taxes that are available to Agents.
+Gives a context for the laws and taxes
 
 -------------------------------------------------------------------------------
 
@@ -169,7 +173,8 @@ sequence of steps
 
 #### *Responsibilities*
 
-Knows its price taker, price maker, execution instant, execution venue, commitment to settle, settlement date, settlement actions 
+Knows its price taker, price maker, execution instant, execution venue, commitment to settle, settlement date, settlement actions
+
 #### *Collaborators*
 
 Instant, Deal, Agent, Venue, Action?
@@ -254,7 +259,74 @@ The price maker transfers ownership of some amount of cash and the price taker t
 
 -------------------------------------------------------------------------------
 
-### Class:
+### Class: Deal event
+
+Execution or quote of a transaction expressible as a deal level
+
+#### *Responsibilities*
+
+#### *Collaborators*
+
+-------------------------------------------------------------------------------
+
+### Class: Execution event
+
+The event of transaction actually taking place
+
+#### *Responsibilities*
+
+#### *Collaborators*
+
+-------------------------------------------------------------------------------
+
+
+### Class: Quote Event
+
+The event of one agent publicly indicating willingness to enter a transaction at
+some deal-level.
+
+#### *Responsibilities*
+
+#### *Collaborators*
+
+-------------------------------------------------------------------------------
+
+
+### Class: Index Event
+
+The event of an index assuming a new value
+
+We define an index to be any scalar variable observable by all agents in the market that can influence agents’ decisions to act.
+
+#### *Responsibilities*
+
+#### *Collaborators*
+
+-------------------------------------------------------------------------------
+
+### Class: Observation
+
+An agent *records* an event by creating evidence of the event. We define *evidence* of an event to be information stored as a consequence of the event from which we can recover all information about the event. The *observer* is the agent who records the event. An *observation* is the event of an agent observing some event and creating evidence of that event.
+
+#### *Responsibilities*
+
+#### *Collaborators*
+
+-------------------------------------------------------------------------------
+
+### Class: Payment
+
+A payment is the transfer of ownership and possession of a quantity of units of asset on a specific payment date.
+
+#### *Responsibilities*
+
+#### *Collaborators*
+
+-------------------------------------------------------------------------------
+
+### Class: Loan
+
+A loan is the transfer of possession of a quantity of units of asset from Agent A to Agent B, where Agent B returns the asset to Agent A at some future date
 
 #### *Responsibilities*
 
@@ -270,7 +342,6 @@ The price maker transfers ownership of some amount of cash and the price taker t
 
 -------------------------------------------------------------------------------
 
-
 ### Class:
 
 #### *Responsibilities*
@@ -278,13 +349,3 @@ The price maker transfers ownership of some amount of cash and the price taker t
 #### *Collaborators*
 
 -------------------------------------------------------------------------------
-
-
-### Class:
-
-#### *Responsibilities*
-
-#### *Collaborators*
-
--------------------------------------------------------------------------------
-
