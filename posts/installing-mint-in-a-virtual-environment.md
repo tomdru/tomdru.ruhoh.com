@@ -80,3 +80,7 @@ If the installation does not run into any errors, run the unit test
     python tests/run.py
 
 If you get some errors, this means that the project has not been updated. It is not necessarily a problem with your setup.
+
+Finally, add mint to your PYTHONPATH
+    
+    export PYTHONPATH=$PYTHONPATH:~/hgdev/org.bitbucket/autonomy/clove/
