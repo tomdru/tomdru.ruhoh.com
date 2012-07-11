@@ -1,6 +1,6 @@
 ---
 
-title: xmldb Tutorial 
+title: Installing QuantLib Python
 date: '2012-07-11'
 description: Installing QuantLib with Python bindings 
 categories: installation
@@ -20,5 +20,5 @@ First install QuantLib with the Python bindings:
 
 To access QuantLib in a virtual environment:
 
-export LD_LIBRARY_PATH=/usr/lib/python2.7/dist-packages/QuantLib:$LD_LIBRARY_PATH
-export PYTHONPATH=/usr/lib/python2.7/dist-packages/QuantLib:$PYTHONPATH
+    export LD_LIBRARY_PATH=/usr/lib/python2.7/dist-packages/QuantLib:$LD_LIBRARY_PATH
+    export PYTHONPATH=/usr/lib/python2.7/dist-packages/QuantLib:$PYTHONPATH
