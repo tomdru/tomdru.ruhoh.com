@@ -126,6 +126,7 @@ You should also edit the .vimrc, which should be empty. Download the recommended
 
     mkdir ~/Dropbox/config/vim
     wget https://raw.github.com/gist/1295884/d786bbd469cb700666daad5d21d26ca3eeb9b6be/.vimrc
+    mv .vimrc ~/Dropbox/config/vim/
     ln -s ~/Dropbox/config/vim/.vimrc ~
 
 One useful feature of this configuration is that it substitutes four spaces for a tab when you hit the tab key. Tabs can be difficult to work with and is considered bad style.
